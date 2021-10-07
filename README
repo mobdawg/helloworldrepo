@@ -1,0 +1,10 @@
+To package and make this program an executable distribution, run the following commands
+python3 -m zipapp helloworld -m "program:main"
+
+where:
+helloworld - the application folder
+program:main - in the format of <main module>:<main function>
+
+The command will create an archive file named helloworld.pyz.
+Then run the program with the following command
+python3 helloworld.pyz

@@ -6,10 +6,12 @@
 #				when run either as a program or imported a as module
 
 
-import hello_text
+import hellotext
+
+
+def main():
+	print("in main module")
 
 
 if __name__ == "__main__":
-	print("in main module")
-else:
-	print("from imported module")
+	main()
