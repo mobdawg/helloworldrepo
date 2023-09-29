@@ -9,8 +9,10 @@ Single string word with zero iteration
 >>> helloworld_pythonic_func(0)
 []
 """
+
+
 def helloworld_pythonic_func(num_times=1):
-    """    
+    """
     Single string word with negative one parameter for the iteration
     >>> helloworld_pythonic_func(-1)
     []
@@ -19,7 +21,7 @@ def helloworld_pythonic_func(num_times=1):
     >>> helloworld_pythonic_func(-2)
     []
 
-    Single string word with no argument passed so that default will 
+    Single string word with no argument passed so that default will
     be used for  iteration
     >>> helloworld_pythonic_func()
     ['hello world']
@@ -43,6 +45,8 @@ List of words using default argument
 >>> helloworld_derived_cfunc("hello", "world")
 ['hello', 'world']
 """
+
+
 def helloworld_derived_cfunc(*iter_text_args):
     """
     List of words with single empty string argument
@@ -65,7 +69,7 @@ def helloworld_derived_cfunc(*iter_text_args):
     >>> helloworld_derived_cfunc("hello ", "world ")
     ['hello ', 'world ']
     """
-    return [word for word in map(lambda wor: wor, iter_text_args)]
+    return list(map(lambda wor: wor, iter_text_args))
 
 
 print("hello world text header caption ", end="")
@@ -74,4 +78,5 @@ print("hello world text header caption ", end="")
 if __name__ == "__main__":
     print()
     import doctest
+
     doctest.testmod()
